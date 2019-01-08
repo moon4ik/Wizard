@@ -22,7 +22,7 @@ pod 'Wizard'
 
 ## Author
 
-moon4ik@gmail.com, ole.mykhailenko@temabit.com
+Oleksii Mykhailenko, moon4ik@gmail.com
 
 ## License
 

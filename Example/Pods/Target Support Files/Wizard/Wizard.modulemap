@@ -1,0 +1,6 @@
+framework module Wizard {
+  umbrella header "Wizard-umbrella.h"
+
+  export *
+  module * { export * }
+}

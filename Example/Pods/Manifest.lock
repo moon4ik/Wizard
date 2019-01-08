@@ -1,0 +1,16 @@
+PODS:
+  - Wizard (0.1.0)
+
+DEPENDENCIES:
+  - Wizard (from `../`)
+
+EXTERNAL SOURCES:
+  Wizard:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Wizard: 1d0bf591069bdd99dc1506c58c16ad270fb9d5c0
+
+PODFILE CHECKSUM: 9a8a33fa44b8c19a1ef6e85594a25725f0d7122a
+
+COCOAPODS: 1.5.3

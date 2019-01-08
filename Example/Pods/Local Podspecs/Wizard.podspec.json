@@ -1,0 +1,22 @@
+{
+  "name": "Wizard",
+  "version": "0.1.0",
+  "summary": "A short description of Wizard.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/moon4ik@gmail.com/Wizard",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "moon4ik@gmail.com": "ole.mykhailenko@temabit.com"
+  },
+  "source": {
+    "git": "https://github.com/moon4ik@gmail.com/Wizard.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Wizard/Classes/**/*"
+}
