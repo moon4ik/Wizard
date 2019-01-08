@@ -11,6 +11,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+iOS: 11.0+
+Swift: 4.2
+
 ## Installation
 
 Wizard is available through [CocoaPods](https://cocoapods.org). To install
