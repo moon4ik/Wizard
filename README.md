@@ -1,6 +1,5 @@
 # Wizard
 
-[![CI Status](https://img.shields.io/travis/moon4ik@gmail.com/Wizard.svg?style=flat)](https://travis-ci.org/moon4ik@gmail.com/Wizard)
 [![Version](https://img.shields.io/cocoapods/v/Wizard.svg?style=flat)](https://cocoapods.org/pods/Wizard)
 [![License](https://img.shields.io/cocoapods/l/Wizard.svg?style=flat)](https://cocoapods.org/pods/Wizard)
 [![Platform](https://img.shields.io/cocoapods/p/Wizard.svg?style=flat)](https://cocoapods.org/pods/Wizard)
