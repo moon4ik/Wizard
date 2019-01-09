@@ -11,6 +11,8 @@ import Foundation
 public protocol WizardDelegate: class {
     func skipDidTap()
     func nextDidTap()
+    func nextDidSwipe()
+    func prevDidSwipe()
     func doneDidTap()
 }
 
@@ -59,7 +61,11 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
         }
     }
     
-    public var doneButtonTitle: String = "DONE"
+    public var doneButtonTitle: String = "DONE" {
+        didSet {
+            nextButton.setTitle(doneButtonTitle.uppercased(), for: .normal)
+        }
+    }
     
     // MARK: - Init
     
@@ -90,6 +96,31 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
         transition.subtype = .fromBottom
         view.window!.layer.add(transition, forKey: nil)
         dismiss(animated: false, completion: nil)
+    }
+    
+    // MARK: - ScrollView
+    
+    public override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let x = targetContentOffset.pointee.x
+        let currentItem = Int(x / self.view.frame.width)
+        
+        if currentItem > pageControl.currentPage {
+            delegate?.nextDidSwipe()
+        } else if currentItem < pageControl.currentPage {
+            delegate?.prevDidSwipe()
+        }
+        
+        switch currentItem {
+        case pages.count-1:
+            self.nextButton.setTitle(doneButtonTitle.uppercased(), for: .normal)
+        default:
+            self.nextButton.setTitle(nextButtonTitle.uppercased(), for: .normal)
+        }
+        
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let `self` = self else { return }
+            self.pageControl.currentPage = currentItem
+        }
     }
     
     // MARK: - CollectionView
@@ -152,7 +183,8 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
     }
     
     private func setupNextButton() {
-        nextButton.setTitle(nextButtonTitle.uppercased(), for: .normal)
+        let title = pages.count == 1 ? doneButtonTitle.uppercased() : nextButtonTitle.uppercased()
+        nextButton.setTitle(title, for: .normal)
         nextButton.setTitleColor(nextButtonColor, for: .normal)
         nextButton.addTarget(self, action: #selector(nextDidTap), for: .touchUpInside)
     }
@@ -179,7 +211,7 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
             dismissAnimated()
             return
         case pages.count-1:
-            self.nextButtonTitle = doneButtonTitle.uppercased()
+            self.nextButton.setTitle(doneButtonTitle.uppercased(), for: .normal)
             fallthrough
         default:
             let indexPath = IndexPath(item: nextItem, section: 0)

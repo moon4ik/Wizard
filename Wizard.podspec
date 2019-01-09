@@ -8,17 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Wizard'
-  s.version          = '0.1.0'
-  s.summary          = 'Wizard.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '0.1.2'
+  s.summary          = 'Wizard view controller for iOS.'
+  
+  s.ios.deployment_target = '11.0'
+  s.swift_version = '4.2'
+  
   s.description      = <<-DESC
-'Collection view controller with title, subtitle, image and subimages.'
+  'Collection view controller with title, subtitle, image and subimages.'
                        DESC
 
   s.homepage         = 'https://github.com/moon4ik/Wizard'
@@ -27,9 +24,6 @@ Pod::Spec.new do |s|
   s.author           = { 'Oleksii Mykhailenko' => 'moon4ik@gmail.com' }
   s.source           = { :git => 'https://github.com/moon4ik/Wizard.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '11.0'
-  s.swift_version = '4.2'
   s.source_files = 'Wizard/Classes/**/*'
   
   # s.resource_bundles = {
