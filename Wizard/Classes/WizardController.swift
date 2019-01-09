@@ -18,13 +18,12 @@ public protocol WizardDelegate: class {
 
 public class WizardController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    private var pages = [WizardPage]()
+    
     // MARK: - PUBLIC
     
     public weak var delegate: WizardDelegate?
-    
-    public var pages = [WizardPage]()
-    
-    
+
     public var skipButtonTitle: String = "SKIP" {
         didSet {
             skipButton.setTitle(skipButtonTitle.uppercased(), for: .normal)
@@ -34,12 +33,6 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
     public var skipButtonColor: UIColor = .darkGray {
         didSet {
             skipButton.setTitleColor(skipButtonColor, for: .normal)
-        }
-    }
-    
-    public var skipButtonEnabled: Bool = true {
-        didSet {
-            skipButton.isEnabled = skipButtonEnabled
         }
     }
     
