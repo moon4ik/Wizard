@@ -25,12 +25,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/moon4ik/Wizard.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.source_files = 'Wizard/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Wizard' => ['Wizard/Assets/*.png']
-  # }
-
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.resources             = '*.xcassets'
+  s.frameworks            = 'UIKit', 'Foundation'
+
+#  s.dependency 'IOSDevice'
+
 end

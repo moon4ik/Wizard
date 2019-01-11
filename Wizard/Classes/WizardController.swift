@@ -19,6 +19,19 @@ public protocol WizardDelegate: class {
 public class WizardController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private var pages = [WizardPage]()
+    private var skipButton = UIButton()
+    private var nextButton = UIButton()
+    private var pageControl = UIPageControl()
+    private var bottomControllStackView = UIStackView()
+    private var isSkipButtonHidden: Bool = false {
+        didSet {
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                guard let `self` = self else { return }
+                self.skipButton.alpha = self.isSkipButtonHidden ? 0 : 1
+                self.skipButton.isEnabled = !self.isSkipButtonHidden
+            }
+        }
+    }
     
     // MARK: - PUBLIC
     
@@ -29,6 +42,7 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
             skipButton.setTitle(skipButtonTitle.uppercased(), for: .normal)
         }
     }
+//    private var emptySkipButtonTitle: String = ""
     
     public var skipButtonColor: UIColor = .darkGray {
         didSet {
@@ -105,9 +119,11 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
         
         switch currentItem {
         case pages.count-1:
-            self.nextButton.setTitle(doneButtonTitle.uppercased(), for: .normal)
+            nextButton.setTitle(doneButtonTitle.uppercased(), for: .normal)
+            isSkipButtonHidden = true
         default:
-            self.nextButton.setTitle(nextButtonTitle.uppercased(), for: .normal)
+            nextButton.setTitle(nextButtonTitle.uppercased(), for: .normal)
+            isSkipButtonHidden = false
         }
         
         UIView.animate(withDuration: 0.3) { [weak self] in
@@ -143,13 +159,7 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
         return 0
     }
     
-    
     // MARK: - StackView
-    
-    private var skipButton = UIButton()
-    private var nextButton = UIButton()
-    private var pageControl = UIPageControl()
-    private var bottomControllStackView = UIStackView()
     
     private func setupBottomControllStackView() {
         setupSkipButton()
@@ -173,11 +183,11 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
         skipButton.setTitle(skipButtonTitle.uppercased(), for: .normal)
         skipButton.setTitleColor(skipButtonColor, for: .normal)
         skipButton.addTarget(self, action: #selector(skipDidTap), for: .touchUpInside)
+        isSkipButtonHidden = pages.count == 1
     }
     
     private func setupNextButton() {
-        let title = pages.count == 1 ? doneButtonTitle.uppercased() : nextButtonTitle.uppercased()
-        nextButton.setTitle(title, for: .normal)
+        nextButton.setTitle(pages.count == 1 ? doneButtonTitle.uppercased() : nextButtonTitle.uppercased(), for: .normal)
         nextButton.setTitleColor(nextButtonColor, for: .normal)
         nextButton.addTarget(self, action: #selector(nextDidTap), for: .touchUpInside)
     }
@@ -204,7 +214,8 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
             dismissAnimated()
             return
         case pages.count-1:
-            self.nextButton.setTitle(doneButtonTitle.uppercased(), for: .normal)
+            nextButton.setTitle(doneButtonTitle.uppercased(), for: .normal)
+            isSkipButtonHidden = true
             fallthrough
         default:
             let indexPath = IndexPath(item: nextItem, section: 0)
@@ -212,6 +223,7 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
             UIView.animate(withDuration: 0.3) { [weak self] in
                 self?.pageControl.currentPage = nextItem
             }
+            skipButton.setTitle(skipButtonTitle.uppercased(), for: .normal)
             delegate?.nextDidTap()
         }
     }

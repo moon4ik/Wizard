@@ -12,17 +12,20 @@
 		2E331CEE20BEEDD31C9DB20B4BE2BA08 /* Wizard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62A96707870079112B98C7A885E9885D /* Wizard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3468AA957B05DED0479AF4D420B84651 /* Pods-Wizard_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BB1F04F34E44B8E56CB67019E56169 /* Pods-Wizard_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		491CB85221E4DA7000D1CEFB /* WizardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84E21E4DA7000D1CEFB /* WizardPage.swift */; };
-		491CB85321E4DA7000D1CEFB /* WizardPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84F21E4DA7000D1CEFB /* WizardPageView.swift */; };
+		491CB85321E4DA7000D1CEFB /* WizardPhonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84F21E4DA7000D1CEFB /* WizardPhonePage.swift */; };
 		491CB85421E4DA7000D1CEFB /* WizardPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB85021E4DA7000D1CEFB /* WizardPageCell.swift */; };
 		491CB85521E4DA7800D1CEFB /* WizardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84D21E4DA7000D1CEFB /* WizardController.swift */; };
 		491CB85621E4DA7A00D1CEFB /* WizardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84D21E4DA7000D1CEFB /* WizardController.swift */; };
 		491CB85721E4DA7B00D1CEFB /* WizardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84D21E4DA7000D1CEFB /* WizardController.swift */; };
 		491CB85821E4DA8500D1CEFB /* WizardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84E21E4DA7000D1CEFB /* WizardPage.swift */; };
 		491CB85921E4DA8500D1CEFB /* WizardPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB85021E4DA7000D1CEFB /* WizardPageCell.swift */; };
-		491CB85A21E4DA8500D1CEFB /* WizardPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84F21E4DA7000D1CEFB /* WizardPageView.swift */; };
+		491CB85A21E4DA8500D1CEFB /* WizardPhonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84F21E4DA7000D1CEFB /* WizardPhonePage.swift */; };
 		491CB85B21E4DA8600D1CEFB /* WizardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84E21E4DA7000D1CEFB /* WizardPage.swift */; };
 		491CB85C21E4DA8600D1CEFB /* WizardPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB85021E4DA7000D1CEFB /* WizardPageCell.swift */; };
-		491CB85D21E4DA8600D1CEFB /* WizardPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84F21E4DA7000D1CEFB /* WizardPageView.swift */; };
+		491CB85D21E4DA8600D1CEFB /* WizardPhonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CB84F21E4DA7000D1CEFB /* WizardPhonePage.swift */; };
+		491CB87F21E8F31B00D1CEFB /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491CB87E21E8F31B00D1CEFB /* Asset.xcassets */; };
+		491CB88021E8F31B00D1CEFB /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491CB87E21E8F31B00D1CEFB /* Asset.xcassets */; };
+		491CB88121E8F31B00D1CEFB /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491CB87E21E8F31B00D1CEFB /* Asset.xcassets */; };
 		6C02BC2B76A3AE3255D309CB13A88B46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		7711E0F73BCDAC69D2093580AE42FE79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		84022305E92499296E4C6C5EA82E7073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -58,8 +61,9 @@
 		4198D1397A0F050301B9A5F11484C3B5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		491CB84D21E4DA7000D1CEFB /* WizardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WizardController.swift; path = Wizard/Classes/WizardController.swift; sourceTree = "<group>"; };
 		491CB84E21E4DA7000D1CEFB /* WizardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WizardPage.swift; path = Wizard/Classes/WizardPage.swift; sourceTree = "<group>"; };
-		491CB84F21E4DA7000D1CEFB /* WizardPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WizardPageView.swift; path = Wizard/Classes/WizardPageView.swift; sourceTree = "<group>"; };
+		491CB84F21E4DA7000D1CEFB /* WizardPhonePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WizardPhonePage.swift; path = Wizard/Classes/WizardPhonePage.swift; sourceTree = "<group>"; };
 		491CB85021E4DA7000D1CEFB /* WizardPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WizardPageCell.swift; path = Wizard/Classes/WizardPageCell.swift; sourceTree = "<group>"; };
+		491CB87E21E8F31B00D1CEFB /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		4DB7D5122E7BD0400C0A091F62003CFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5826ECCC0627BEA73940908568184C38 /* Pods-Wizard_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Wizard_Example-umbrella.h"; sourceTree = "<group>"; };
 		58C466768F74ADED9E5E625413B91B6A /* Pods-Wizard_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wizard_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -139,8 +143,9 @@
 			children = (
 				491CB84D21E4DA7000D1CEFB /* WizardController.swift */,
 				491CB84E21E4DA7000D1CEFB /* WizardPage.swift */,
+				491CB84F21E4DA7000D1CEFB /* WizardPhonePage.swift */,
 				491CB85021E4DA7000D1CEFB /* WizardPageCell.swift */,
-				491CB84F21E4DA7000D1CEFB /* WizardPageView.swift */,
+				491CB87E21E8F31B00D1CEFB /* Asset.xcassets */,
 				9E6897DCE73EECAD3EC4DF507EFECC95 /* Pod */,
 				E68ECA6F8A64EF3D8D42AE6B651A6809 /* Support Files */,
 			);
@@ -368,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491CB88121E8F31B00D1CEFB /* Asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491CB87F21E8F31B00D1CEFB /* Asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491CB88021E8F31B00D1CEFB /* Asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +402,7 @@
 			files = (
 				491CB85521E4DA7800D1CEFB /* WizardController.swift in Sources */,
 				491CB85C21E4DA8600D1CEFB /* WizardPageCell.swift in Sources */,
-				491CB85D21E4DA8600D1CEFB /* WizardPageView.swift in Sources */,
+				491CB85D21E4DA8600D1CEFB /* WizardPhonePage.swift in Sources */,
 				E50DE37539F88FF38E27E8E3B578B958 /* Wizard-dummy.m in Sources */,
 				491CB85B21E4DA8600D1CEFB /* WizardPage.swift in Sources */,
 			);
@@ -406,7 +414,7 @@
 			files = (
 				491CB85721E4DA7B00D1CEFB /* WizardController.swift in Sources */,
 				491CB85921E4DA8500D1CEFB /* WizardPageCell.swift in Sources */,
-				491CB85A21E4DA8500D1CEFB /* WizardPageView.swift in Sources */,
+				491CB85A21E4DA8500D1CEFB /* WizardPhonePage.swift in Sources */,
 				27816C9DC4C67F2F74623A24A53F0729 /* Pods-Wizard_Tests-dummy.m in Sources */,
 				491CB85821E4DA8500D1CEFB /* WizardPage.swift in Sources */,
 			);
@@ -416,7 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				491CB85321E4DA7000D1CEFB /* WizardPageView.swift in Sources */,
+				491CB85321E4DA7000D1CEFB /* WizardPhonePage.swift in Sources */,
 				2150A82E45295EE19353FA988B7BD6EF /* Pods-Wizard_Example-dummy.m in Sources */,
 				491CB85221E4DA7000D1CEFB /* WizardPage.swift in Sources */,
 				491CB85621E4DA7A00D1CEFB /* WizardController.swift in Sources */,

@@ -10,24 +10,25 @@ import Foundation
 
 class WizardPageCell: UICollectionViewCell {
     
-    public var page: WizardPage? {
+    public var page: UIView? {
         didSet {
-            guard let `page` = page else { return }
-            let wizardView = WizardPageView(page: page)
-            if contentView.subviews.count > 0 {
-                contentView.subviews.forEach{ $0.removeFromSuperview() }
+            guard let pageView = page else {
+                if contentView.subviews.count > 0 {
+                    contentView.subviews.forEach{ $0.removeFromSuperview() }
+                }
+                return
             }
-            contentView.addSubview(wizardView)
-            wizardView.translatesAutoresizingMaskIntoConstraints = false
+            contentView.addSubview(pageView)
+            pageView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                wizardView.widthAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.widthAnchor),
-                wizardView.heightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.heightAnchor),
-                wizardView.centerXAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.centerXAnchor),
-                wizardView.centerYAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.centerYAnchor)
-                ])
+                pageView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
+                pageView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor),
+                pageView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor),
+                pageView.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor)
+            ])
         }
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white

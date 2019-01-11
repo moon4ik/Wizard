@@ -20,19 +20,9 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // Pages
-        let firstPage = WizardPage(title: "First Title",
-                                   subTitle: "Description with two lines",
-                                   image: UIImage(),
-                                   subImage: UIImage())
-        let secondPage = WizardPage(title: "Secind Title",
-                                    subTitle: "Description with two lines. \n Second line :)",
-                                   image: UIImage(),
-                                   subImage: UIImage())
-        let thirdPage = WizardPage(title: "Third Title",
-                                    subTitle: "Description with two lines. \n Second line :)",
-                                    image: UIImage(),
-                                    subImage: UIImage())
-        let allPages = [firstPage, secondPage, thirdPage]
+//        let page1 = WizardPage(title: "Title", subtitle: "Description", image: UIImage(), subimage: UIImage())
+        let page = WizardPhonePage(title: "iPhone", subtitle: "The best \n of the best!", phoneContent: UIImage())
+        let allPages = [page]
         
         // Wizard ViewController
         let wizardViewController = WizardController(pages: allPages)
