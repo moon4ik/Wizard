@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Wizard'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Wizard view controller for iOS.'
   
   s.ios.deployment_target = '11.0'
   s.swift_version = '4.2'
   
-  s.description      = <<-DESC
-  'Collection view controller with title, subtitle, image and subimages.'
+  s.description      = <<-DESCV
+  'View controller with title, subtitle, phone image and phone content image. You can use iPhone 8 white/black or iPhone X skin. Also you can use custom UIView for showing it.'
                        DESC
 
   s.homepage         = 'https://github.com/moon4ik/Wizard'
@@ -28,7 +28,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.resources             = '*.xcassets'
   s.frameworks            = 'UIKit', 'Foundation'
-
-#  s.dependency 'IOSDevice'
 
 end

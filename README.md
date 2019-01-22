@@ -25,10 +25,37 @@ pod 'Wizard'
 
 ## How to use
 
-1. Create pages ``WizardPage(title: String, subTitle: String, image: UIImage, subImage: UIImage)``
-2. Create Wizard Controller with array of pages ``WizardController(pages: [WizardPage])``
-3. Present Wizard Controller
+1. Create  ``WizardPage()``, add custom elemets on it or create page with phone cover ``WizardPhonePage``
+2. Create Wizard Controller with array of pages ``WizardController(pages: [WizardPhonePage...])``
+3. Present Wizard Controller ``present``
 
+
+### WizardPhonePage:
+```let page = WizardPhonePage(title: "Only iPhone",
+subtitle: "No other phone\nis like iPhone.",
+phoneContent: UIImage(), // You can add your content image 
+phonePosition: .top, // Phone position relatively title and subtitle
+phoneType: .iPhoneX) // Phone skin (.iPhoneX, .iPhone8white, .iPhone8black)
+page.titleColor = .orange // Title color
+page.titleFont = UIFont.systemFont(ofSize: 22, weight: .bold) // Title font
+page.subtitleColor = .darkGray // Subtitle color
+page.subtitleFont = UIFont.systemFont(ofSize: 18, weight: .light) // Subtitle font
+```
+
+### WizardPage:
+```let customPage = WizardPage()
+```
+Use ``customPage`` like main UIView. You can add UILabel, UIImage etc...
+
+### WizardController:
+```let wizardController = WizardController(pages: [page, customPage])
+
+// Add a delegate if you want to know when the user swiped to the next/prev page or taped the skip/next/done button.
+wizardController.delegate = self
+
+// Present Wizard controller.
+present(wizardController, animated: false)
+```
 
 ## Feature
 
@@ -45,12 +72,12 @@ pod 'Wizard'
 - [ ] Hide/show control buttons and page control
 - [ ] Customized page control colors
 
-### Wizard Page
-- [x] ~~Create static Wizard Page~~
+### Wizard Phone Page
+- [x] ~~Create static Wizard Phone Page~~
 - [x] ~~Customized text~~
-- [ ] Customized text fonts
-- [ ] Customized text colors
-- [ ] Text position top/bottom relative to the image.
+- [x] ~~Customized text fonts~~
+- [x] ~~Customized text colors~~
+- [x] ~~Phone position top/center/bottom relative to the title and subtitle~~
 
 ## Author
 

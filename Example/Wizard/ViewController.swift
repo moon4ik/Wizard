@@ -19,10 +19,43 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Pages
-//        let page1 = WizardPage(title: "Title", subtitle: "Description", image: UIImage(), subimage: UIImage())
-        let page = WizardPhonePage(title: "iPhone", subtitle: "The best \n of the best!", phoneContent: UIImage())
-        let allPages = [page]
+        
+        // Default WizardPage which you can use like UIView and customized it.
+        
+//        let page0 = WizardPage()
+//        page0.backgroundColor = .red
+//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+//        page0.addSubview(label)
+        
+        // Phone page
+        let page1 = WizardPhonePage(title: "iPhone X",
+                                    subtitle: "ddfdgdfgdfg \n sdfsfsfdsfsd",
+                                    phoneContent: UIImage(named: "mag")!)
+        page1.subtitleColor = .orange
+        page1.subtitleFont = UIFont.systemFont(ofSize: 18, weight: .light)
+        
+        let page2 = WizardPhonePage(title: "iPhone 8 black",
+                                    subtitle: "ddfdgdfgdfg \n sdfsfsfdsfsd",
+                                    phoneContent: UIImage(named: "mag")!,
+                                    phonePosition: .top,
+                                    phoneType: .iPhone8black)
+        page2.subtitleColor = .orange
+        page2.subtitleFont = UIFont.systemFont(ofSize: 18, weight: .light)
+        
+        let page3 = WizardPhonePage(title: "iPhone 8 white",
+                                    subtitle: "ddfdgdfgdfg \n sdfsfsfdsfsd",
+                                    phoneContent: UIImage(named: "mag")!,
+                                    phonePosition: .center,
+                                    phoneType: .iPhone8white)
+        page3.subtitleColor = .orange
+        page3.subtitleFont = UIFont.systemFont(ofSize: 18, weight: .light)
+        
+        // Image
+//        let page4 = WizardImagePage(title: "Image",
+//                                    subtitle: "Description... \n Image description.",
+//                                    image: UIImage(named: "mag")!)
+        
+        let allPages = [page1, page2, page3]//[page0, page1, page2, page3, page4]
         
         // Wizard ViewController
         let wizardViewController = WizardController(pages: allPages)

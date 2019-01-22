@@ -2,10 +2,9 @@ use_frameworks!
 
 target 'Wizard_Example' do
   pod 'Wizard', :path => '../'
-
+  
   target 'Wizard_Tests' do
     inherit! :search_paths
 
-    
   end
 end

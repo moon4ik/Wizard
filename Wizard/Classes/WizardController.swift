@@ -17,7 +17,7 @@ public protocol WizardDelegate: class {
 }
 
 public class WizardController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
+    private let height: CGFloat = 50
     private var pages = [WizardPage]()
     private var skipButton = UIButton()
     private var nextButton = UIButton()
@@ -175,7 +175,7 @@ public class WizardController: UICollectionViewController, UICollectionViewDeleg
             bottomControllStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             bottomControllStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
             bottomControllStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
-            bottomControllStackView.heightAnchor.constraint(equalToConstant: 50),
+            bottomControllStackView.heightAnchor.constraint(equalToConstant: height),
             ])
     }
     
