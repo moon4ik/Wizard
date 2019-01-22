@@ -31,11 +31,12 @@ pod 'Wizard'
 
 
 ### WizardPhonePage:
-```let page = WizardPhonePage(title: "Only iPhone",
-subtitle: "No other phone\nis like iPhone.",
-phoneContent: UIImage(), // You can add your content image 
-phonePosition: .top, // Phone position relatively title and subtitle
-phoneType: .iPhoneX) // Phone skin (.iPhoneX, .iPhone8white, .iPhone8black)
+```swift
+let page = WizardPhonePage(title: "Only iPhone",
+                        subtitle: "No other phone\nis like iPhone.",
+                    phoneContent: UIImage(), // You can add your content image 
+                   phonePosition: .top, // Phone position relatively title and subtitle
+                       phoneType: .iPhoneX) // Phone skin (.iPhoneX, .iPhone8white, .iPhone8black)
 page.titleColor = .orange // Title color
 page.titleFont = UIFont.systemFont(ofSize: 22, weight: .bold) // Title font
 page.subtitleColor = .darkGray // Subtitle color
@@ -43,12 +44,14 @@ page.subtitleFont = UIFont.systemFont(ofSize: 18, weight: .light) // Subtitle fo
 ```
 
 ### WizardPage:
-```let customPage = WizardPage()
+```swift
+let customPage = WizardPage()
 ```
 Use ``customPage`` like main UIView. You can add UILabel, UIImage etc...
 
 ### WizardController:
-```let wizardController = WizardController(pages: [page, customPage])
+```swift
+let wizardController = WizardController(pages: [page, customPage])
 
 // Add a delegate if you want to know when the user swiped to the next/prev page or taped the skip/next/done button.
 wizardController.delegate = self
