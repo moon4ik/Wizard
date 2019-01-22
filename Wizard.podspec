@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.swift_version = '4.2'
   
-  s.description      = <<-DESCV
+  s.description      = <<-DESC
   'View controller with title, subtitle, phone image and phone content image. You can use iPhone 8 white/black or iPhone X skin. Also you can use custom UIView for showing it.'
                        DESC
 
